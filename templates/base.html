@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{url_for('static', filename='/images/favicon.ico')}}" type="image/x-icon">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+ <title> {% block title %}  {% endblock  %} - Portfolyx </title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{url_for("main.home")}}">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+ <main>
+  {% block content %}
+  {% endblock  %}
+
+ </main>
+
+
+  <footer>
+    <p>2024 - My flask project </p>
+  </footer>
+</body>
+</html>
